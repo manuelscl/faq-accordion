@@ -101,11 +101,19 @@ body::before {
     height: 3rem;
 }
 
+.faq-accordion__item.active .faq-accordion__question-button::after {
+    content: url(./assets/images/icon-minus.svg);
+}
+
 .faq-accordion__answer {
     display: none;
     padding-top: 1rem;
     padding-bottom: 2.5rem;
     color: hsl(292, 16%, 49%);
+}
+
+.faq-accordion__item.active .faq-accordion__answer {
+    display: block;
 }
 
 .faq-accordion__answer p {
@@ -138,9 +146,5 @@ body::before {
 
     .faq-accordion__answer p {
         font-size: 1.6rem;
-    }
-
-    .faq-accordion__item:last-child .faq-accordion__answer {
-        padding-bottom: 0;
     }
 }
